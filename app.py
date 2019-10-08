@@ -37,7 +37,7 @@ consumer_key=GOOGLE_CLIENT_ID, consumer_secret=GOOGLE_CLIENT_SECRET)
 
 @app.route('/')
 def index():
- return render_template('google_login.html')   
+ return 'Hello buddy!'   
  
     
 

@@ -14,24 +14,24 @@ DEBUG = True
 
 app = Flask(__name__)
 
-app.debug = DEBUG
-app.secret_key = SECRET_KEY
-oauth = OAuth()
+# app.debug = DEBUG
+# app.secret_key = SECRET_KEY
+# oauth = OAuth()
 
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'resume'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-mysql = MySQL()
-mysql.init_app(app)
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_DATABASE_PASSWORD'] = ''
+# app.config['MYSQL_DATABASE_DB'] = 'resume'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+# mysql = MySQL()
+# mysql.init_app(app)
 
-google = oauth.remote_app('google', base_url='https://www.google.com/accounts/',
-authorize_url='https://accounts.google.com/o/oauth2/auth', request_token_url=None,
-request_token_params={
-    'scope': 'https://www.googleapis.com/auth/userinfo.email', 'response_type': 'code'},
-access_token_url='https://accounts.google.com/o/oauth2/token',
-access_token_method='POST', access_token_params={'grant_type': 'authorization_code'},
-consumer_key=GOOGLE_CLIENT_ID, consumer_secret=GOOGLE_CLIENT_SECRET)
+# google = oauth.remote_app('google', base_url='https://www.google.com/accounts/',
+# authorize_url='https://accounts.google.com/o/oauth2/auth', request_token_url=None,
+# request_token_params={
+#     'scope': 'https://www.googleapis.com/auth/userinfo.email', 'response_type': 'code'},
+# access_token_url='https://accounts.google.com/o/oauth2/token',
+# access_token_method='POST', access_token_params={'grant_type': 'authorization_code'},
+# consumer_key=GOOGLE_CLIENT_ID, consumer_secret=GOOGLE_CLIENT_SECRET)
 
 
 

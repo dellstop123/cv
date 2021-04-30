@@ -14,5 +14,5 @@ public==2019.4.13
 PyMySQL==0.9.3
 query-string==2019.4.13
 request==2019.4.13
-urllib3==1.25.6
+urllib3==1.25.8
 Werkzeug==0.16.0
